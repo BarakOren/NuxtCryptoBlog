@@ -27,24 +27,24 @@ export default {
     } 
   },
   created(){
-    //  axios.get('https://rest.coinapi.io/v1/assets/BTC', {
-    //   headers: {'X-CoinAPI-Key': '5D275012-7860-40D5-BFBA-36B71E41D722'}
-    //   }).then(data => {
-    //   const price = data.data[0].price_usd.toString()
-    //   this.BTC = price.substr(0, price.indexOf('.') + 4)
-    // })
-    //  axios.get('https://rest.coinapi.io/v1/assets/eth', {
-    //   headers: {'X-CoinAPI-Key': '5D275012-7860-40D5-BFBA-36B71E41D722'}
-    //   }).then(data => {
-    //   const price = data.data[0].price_usd.toString()
-    //   this.ETH = price.substr(0, price.indexOf('.') + 4)
-    // })
-    //   axios.get('https://rest.coinapi.io/v1/assets/SOL', {
-    //   headers: {'X-CoinAPI-Key': '5D275012-7860-40D5-BFBA-36B71E41D722'}
-    //   }).then(data => {
-    //   const price = data.data[0].price_usd.toString()
-    //   this.SOL = price.substr(0, price.indexOf('.') + 4)
-    // })
+     axios.get('https://rest.coinapi.io/v1/assets/BTC', {
+      headers: {'X-CoinAPI-Key': '5D275012-7860-40D5-BFBA-36B71E41D722'}
+      }).then(data => {
+      const price = data.data[0].price_usd.toString()
+      this.BTC = price.substr(0, price.indexOf('.') + 4)
+    })
+     axios.get('https://rest.coinapi.io/v1/assets/eth', {
+      headers: {'X-CoinAPI-Key': '5D275012-7860-40D5-BFBA-36B71E41D722'}
+      }).then(data => {
+      const price = data.data[0].price_usd.toString()
+      this.ETH = price.substr(0, price.indexOf('.') + 4)
+    })
+      axios.get('https://rest.coinapi.io/v1/assets/SOL', {
+      headers: {'X-CoinAPI-Key': '5D275012-7860-40D5-BFBA-36B71E41D722'}
+      }).then(data => {
+      const price = data.data[0].price_usd.toString()
+      this.SOL = price.substr(0, price.indexOf('.') + 4)
+    })
   }
 }
 
