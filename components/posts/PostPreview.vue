@@ -1,12 +1,12 @@
 <template>
-    <nuxt-link :to="postLink">
-    <article class="post-preview">
+    <nuxt-link class="text-black decoration-0" :to="postLink">
+    <article class="post-preview border-2 border-[#2d2d2d] p-[10px] w-[300px] h-[350px] mx-[10px] my-[20px] relative transition-all hover:shadow-[0_0_30px_#fbbf24] hover:scale-[1.05]" >
         <div class="post-thumbnail" 
         :style="{backgroundImage: 'url(' + thumbnail + ')'}"></div>
         <div class="post-content">
         <h1>{{title}}</h1>
         <!-- <p>{{ previewText.slice(0, 100) }}</p> -->
-        <p class="preview">{{ previewText.length > 100 ? previewText.slice(0, 100) + "....." : previewText}}</p>
+        <p class="preview">{{ previewText.length > 100 ? previewText.slice(0, 80) + "....." : previewText}}</p>
         <p class="readMore">Read More >>></p>
         </div>
     </article>
@@ -47,28 +47,26 @@ export default {
 </script>
 
 <style scoped>
-a {
+/* a {
   text-decoration: none;
   color: black;
-}
+} */
 
 .post-preview {
-  /* background-color: #181818; */
-  border: 2px solid #2d2d2d;
+  /* border: 2px solid #2d2d2d;
   padding: 10px;
   width: 300px;
   height: 350px;
-  /* border-radius: 10px; */
   transition: .2s all;
   margin: 20px 10px;
-  position: relative;
+  position: relative; */
   transition: .2s all;
 }
 
 .post-preview:hover {
-  border: 2px solid #f8c85f;
-  box-shadow: 0px 0 30px rgb(248, 200, 95, 0.5);
-  transform: scale(1.02);
+  /* border: 2px solid #f8c85f; */
+  /* box-shadow: 0px 0 30px rgb(248, 200, 95, 0.5); */
+  /* transform: scale(1.02); */
 }
 
 .post-thumbnail {

@@ -2,7 +2,8 @@ const bodyParser = require('body-parser')
 
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
-  mode: 'universal',
+  mode: 'static',
+  target: 'static',
   head: {
     title: 'NuxtBlog',
     htmlAttrs: {
@@ -23,7 +24,17 @@ export default {
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
+    '@/assets/css/main.css',
   ],
+
+  tailwindcss: {
+    cssPath: '~/assets/css/tailwind.css',
+    configPath: 'tailwind.config.js',
+    exposeConfig: false,
+    config: {},
+    injectPosition: 0,
+    viewer: true,
+  },
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
@@ -36,6 +47,7 @@ export default {
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
+    '@nuxt/postcss8'
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -48,6 +60,14 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
+    publicPath: 'https://barakoren.github.io/NuxtCryptoBlog/',
+    postcss: {
+      plugins: {
+        tailwindcss: {},
+        autoprefixer: {},
+      },
+    },
+
   },
   env: {
     baseUrl: process.env.BASE_URL || 'https://nuxt-blog-92d4c-default-rtdb.europe-west1.firebasedatabase.app',
@@ -55,6 +75,7 @@ export default {
     MarketCap: "c345b7d4-b2ec-428d-9fe9-5eb86f3296c2"
   },
   router: {
+    base: '/NuxtCryptoBlog/',
     extendRoutes(routes, resolve){
       routes.push({
         path: '*',

@@ -1,6 +1,6 @@
 <template>
-    <div class="page">
-    <div class="auth-container">
+    <div class="w-full h-screen flex flex-row items-start justify-center">
+    <div class="mt-[100px] w-[30%]">
         <form @submit.prevent="onSubmit">
             <AppControlInput type="email" v-model="email">Email Address</AppControlInput>
             <AppControlInput type="password" v-model="password">Password</AppControlInput>
@@ -47,7 +47,7 @@ export default {
 </script>
 
 <style scoped>
-.page {
+/* .page {
     width: 100%;
     height: 100vh;  
     display: flex;
@@ -59,5 +59,5 @@ export default {
 .auth-container{
     margin-top: 100px;
     width: 30%;
-}
+} */
 </style>

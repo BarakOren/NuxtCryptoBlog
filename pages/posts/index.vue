@@ -1,7 +1,7 @@
 <template>
-    <div class="posts-page">
-      <h1>Latest News</h1>
-        <PostList :posts="loadedPosts" /> 
+    <div class="flex justify-center flex-col items-center">
+      <h1 class="text-white text-6xl mt-[30px] text-bold">Latest News</h1>
+        <PostList :posts="loadedPosts" />  
     </section>
     </div>
 </template>

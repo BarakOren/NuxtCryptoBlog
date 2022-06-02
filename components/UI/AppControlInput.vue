@@ -1,12 +1,18 @@
 <template>
-  <div class="input-control">
-    <label><slot /></label>
+  <div class="my-[10px]">
+    <label class="block text-bold text-white mb-[2px]"><slot /></label>
     <input
+      class="block w-full box-border border-2 border-amber-400 rounded-xl p-2 bg-transparent text-zinc-500
+      focus:text-white focus:shadow-[0px_0_20px_#f8c85f] outline-none
+      "
       v-if="controlType === 'input'"
       v-bind="$attrs"
       :value="value"
       @input="$emit('input', $event.target.value)">
     <textarea
+      class="block w-full box-border border-2 border-amber-400 rounded-xl p-2 bg-transparent text-zinc-500
+      focus:text-white focus:shadow-[0px_0_20px_#f8c85f] outline-none
+      "
       v-if="controlType === 'textarea'"
       rows="10"
       :value="value"
@@ -31,7 +37,9 @@ export default {
 </script>
 
 <style scoped>
-.input-control {
+
+
+/* .input-control {
   margin: 10px 0;
 }
 
@@ -40,9 +48,9 @@ export default {
   font-weight: bold;
   color: white;
   margin-bottom: 2px;
-}
+} */
 
-.input-control input,
+/* .input-control input,
 .input-control textarea {
   display: block;
   width: 100%;
@@ -52,14 +60,14 @@ export default {
   padding: 5px;
   background-color: rgb(0, 0, 0, 0);
   color: gray;
-}
+} */
 
-.input-control input:focus,
+/* .input-control input:focus,
 .input-control textarea:focus {
   outline: none;
   color: white;
   box-shadow: 0px 0 20px #f8c85f;
-}
+} */
 </style>
 
 

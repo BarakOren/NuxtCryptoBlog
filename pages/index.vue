@@ -1,13 +1,13 @@
 <template>
-  <div class="homePage">
-    <div class="intro">
-      <h1 class="title">COIN NEWS</h1>
-      <p class="login" @click="logIn">LOG IN / SIGN UP</p>
+  <div class="flex flex-col justify-start items-center">
+    <div class="intro flex flex-row items-center justify-center relative w-full h-[300px] bg-[#101010]">
+      <h1 class="title text-white text-8xl m-0 tracking-wider">COIN NEWS</h1>
+      <p class="login m-0 absolute top-[15px] left-[15px] font-thin text-1xl text-zinc-300 hover:text-amber-400" @click="logIn">LOG IN / SIGN UP</p>
     </div>
     <TheHeader />
     <Quotes />
-    <div class="latestNewsDiv">
-      <p>Latest News</p>
+    <div class="w-[84%] py-[10px] px-[2%] bg-[#2d2d2d] ">
+      <p class="text-white tracking-wide">Latest News</p>
     </div>
     <PostList :posts="loadedPosts" />
   </div>
@@ -44,43 +44,24 @@ export default {
 }
 
 .intro{
-  position: relative;
-  width: 100%;
-  height: 300px;
   background-image: url("@/assets/background2.jpg");
-  background-color: #101010;
   background-size: 80%;
   background-repeat: no-repeat;
   background-position: 100% 50%;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
 }
 
 .title{
-  color: white;
-  font-size: 7vw;
-  margin: 0;
-  letter-spacing: 10px;
   text-shadow: 0 0 10px rgb(255, 255, 255, 0.5);
 }
 
 .login {
-margin: 0;
-position: absolute;
-top: 15px;
-left: 15px;
-font-weight: 100;
-font-size: 15px;
-color: #999999;
 text-shadow: 0 0 5px #999999;
 transition: .2s all;
 }
+
 .login:hover{
-color: rgb(248, 200, 95);
 cursor: pointer;
-text-shadow: 0 0 3px rgb(248, 200, 95);
+text-shadow: 0 0 3px rgb(251 191 36);
 }
 
 .latestNewsDiv{

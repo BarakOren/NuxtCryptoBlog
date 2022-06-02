@@ -1,15 +1,12 @@
 <template>
-    <div class="PostPage">
-        <section class="post">
-            <h1 class="postTitle">{{ loadedPost.title }}</h1>
-            <div class="img"
+    <div class="text-white w-full flex flex-col justify-start items-center text-center">
+        <section class="w-full flex flex-col justify-start items-center text-center">
+            <h1 class="w-[90%] text-5xl my-[30px]">{{ loadedPost.title }}</h1>
+            <div class="w-[50%] h-[350px] bg-center bg-cover my-[20px]"
             :style="{backgroundImage: 'url(' + loadedPost.thumbnail + ')'}"
             />
-            <div class="postDetails">
-                <p>{{loadedPost.updatedDate | date}}</p>
-                <p>By {{loadedPost.author}}</p>
-            </div>
-            <p class="text">{{loadedPost.content}}</p>
+            <p class="my-2">{{loadedPost.updatedDate | date}}, by {{loadedPost.author}}</p>
+            <p class="w-[60%] my-[30px] leading-7">{{loadedPost.content}}</p>
         </section>
     </div>
 </template>
@@ -31,7 +28,7 @@ export default {
 </script>
 
 <style scoped>
-.PostPage{
+/* .PostPage{
   color: white;
   width: 100%;
   display: flex;
@@ -68,6 +65,6 @@ export default {
   width: 60%;
   line-height: 23px;
   margin-bottom: 30px;
-}
+} */
 
 </style>
