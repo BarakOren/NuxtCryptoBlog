@@ -1,10 +1,10 @@
 <template>
     <div>
         <TheHeader v-if="displayTop" @sidenavToggle="displaySidenav = !displaySidenav"/>
-        <TheSidenav 
+        <!-- <TheSidenav 
         :show="displaySidenav"
         @close="displaySidenav = false"
-        />
+        /> -->
        
         <nuxt/>
          <BottomNav />

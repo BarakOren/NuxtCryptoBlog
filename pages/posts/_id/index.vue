@@ -1,8 +1,10 @@
 <template>
     <div class="text-white w-full flex flex-col justify-start items-center text-center">
         <section class="w-full flex flex-col justify-start items-center text-center">
-            <h1 class="w-[90%] text-5xl my-[30px]">{{ loadedPost.title }}</h1>
-            <div class="w-[50%] h-[350px] bg-center bg-cover my-[20px]"
+            <h1 class="w-[90%] text-5xl my-[30px] md:text-3xl">{{ loadedPost.title }}</h1>
+            <div class="w-[50%] h-[350px] bg-center bg-cover my-[20px]
+            md:w-[90%] md:h-[300px]
+            "
             :style="{backgroundImage: 'url(' + loadedPost.thumbnail + ')'}"
             />
             <p class="my-2">{{loadedPost.updatedDate | date}}, by {{loadedPost.author}}</p>

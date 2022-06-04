@@ -1,12 +1,12 @@
 <template>
   <div class="flex flex-col justify-start items-center">
     <div class="intro flex flex-row items-center justify-center relative w-full h-[300px] bg-[#101010]">
-      <h1 class="title text-white text-8xl m-0 tracking-wider">COIN NEWS</h1>
+      <h1 class="title text-center text-white text-8xl m-0 tracking-wider">COIN NEWS</h1>
       <p class="login m-0 absolute top-[15px] left-[15px] font-thin text-1xl text-zinc-300 hover:text-amber-400" @click="logIn">LOG IN / SIGN UP</p>
     </div>
     <TheHeader />
     <Quotes />
-    <div class="w-[84%] py-[10px] px-[2%] bg-[#2d2d2d] ">
+    <div class="w-[84%] py-[10px] px-[2%] bg-[#2d2d2d] md:w-[90%]">
       <p class="text-white tracking-wide">Latest News</p>
     </div>
     <PostList :posts="loadedPosts" />
@@ -48,6 +48,13 @@ export default {
   background-size: 80%;
   background-repeat: no-repeat;
   background-position: 100% 50%;
+}
+
+@media (max-width: 768px) { 
+  .intro{
+      background-size: cover;
+  }
+
 }
 
 .title{

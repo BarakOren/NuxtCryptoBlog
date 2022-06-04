@@ -1,5 +1,8 @@
 <template>
-    <section class="w-full flex p-[20px] flex-wrap items-center justify-evenly flex-row">
+    <section class="
+    w-full flex p-[20px] flex-wrap items-center justify-evenly flex-row
+    
+    ">
       <PostPreview
       v-for="post in posts"
       :key="post.id"

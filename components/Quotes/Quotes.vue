@@ -1,16 +1,19 @@
 <template>
-<div class="my-[30px] mx-0 w-[60%] flex flex-row items-center justify-between px-[20px] py-[10px] border-t-2 border-b-2 border-zinc-500">
+<div class="
+my-[30px] mx-0 w-[60%] flex flex-row items-center justify-between px-[20px] py-[10px] border-t-2 border-b-2 border-zinc-500
+md:w-[90%] 
+">
   <div class="flex flex-row justify-start items-center">
       <img class="w-[20px] mr-[7px]" src="@/assets/Bitcoin.png"/>
-      <p class="text-white m-0">${{BTC }}</p>
+      <p class="sm:text-md text-white m-0">${{BTC }}</p>
   </div>
   <div class="flex flex-row justify-start items-center">
       <img class="w-[20px] mr-[7px]" src="@/assets/Ethereum.png"/>
-      <p class="text-white m-0">${{ETH.substr(0,BTC.indexOf('.') + 2)}}</p>
+      <p class="sm:text-md text-white m-0">${{ETH.substr(0,BTC.indexOf('.') + 2)}}</p>
   </div>
   <div class="flex flex-row justify-start items-center">
       <img class="w-[20px] mr-[7px]" src="@/assets/solana.png"/>
-      <p class="text-white m-0">${{SOL.substr(0,BTC.indexOf('.') + 2)}}</p>
+      <p class="sm:text-md text-white m-0">${{SOL.substr(0,BTC.indexOf('.') + 2)}}</p>
   </div>
 </div>
 </template>
@@ -51,16 +54,16 @@ export default {
 </script>
 
 <style scoped>
-.container{
-  /* margin: 30px 0; */
-  /* width: 60%; */
-  /* border-top: 1px solid #666666; */
-  /* border-bottom: 1px solid #666666;
+/* .container{
+  margin: 30px 0; 
+   width: 60%; 
+  border-top: 1px solid #666666; 
+  border-bottom: 1px solid #666666;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  padding: 10px 20px; */
+  padding: 10px 20px;
 }
 
 .container p {
@@ -74,7 +77,7 @@ export default {
   align-items: center;
 }
 
-/* .crypto p {
+.crypto p {
   margin: 0;
 }
 

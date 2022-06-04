@@ -47,9 +47,11 @@ export default {
   margin: 20px auto;
 }
 
-@media (min-width: 768px) {
-  .new-post-form {
-    width: 500px;
-  }
+@media (max-width: 768px) {
+.update-form {
+  width: 90%;
+  margin: 20px auto;
+}
+
 }
 </style>

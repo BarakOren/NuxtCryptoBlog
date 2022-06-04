@@ -2,6 +2,7 @@
   <button
     class="border-none py-2 px-8 rounded-xl 
     bg-amber-400 text-black hover:shadow-[0_0_20px_rgb(248,200,95,0.6)]
+    sm:px-5
     "
     :class="btnStyle"
     v-bind="$attrs"
@@ -39,5 +40,12 @@ box-shadow: 0 0 20px rgb(255, 0, 0, 0.5);
   font-size: 20px;
   padding: 10px 30px;
   margin: 0 20px;
+}
+
+@media (max-width: 768px) {
+  .bigger{
+  margin: 10px 20px;
+
+  }
 }
 </style>

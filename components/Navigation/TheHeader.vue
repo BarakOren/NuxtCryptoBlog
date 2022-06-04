@@ -1,6 +1,6 @@
 <template>
 <div class="w-full h-[50px] bg-[#1a1a1a] flex justify-center border-b-4 border-amber-400 shadow-lg shadow-amber-400/50">
-    <TheSideNavToggle @toggle="$emit('sidenavToggle')" />
+    <!-- <TheSideNavToggle @toggle="$emit('sidenavToggle')" /> -->
     <div class="w-[25%] flex flex-row justify-center  text-white text-base">
       <nuxt-link class="flex flex-row justify-center items-center px-5 hover:bg-zinc-800" to="/">Home</nuxt-link>
       <nuxt-link class="flex flex-row justify-center items-center px-5 hover:bg-zinc-800" to="/posts">Blog</nuxt-link>

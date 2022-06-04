@@ -1,6 +1,6 @@
 <template>
     <div class="w-full h-screen flex flex-row items-start justify-center">
-    <div class="mt-[100px] w-[30%]">
+    <div class="mt-[100px] w-[30%] md:w-[70%]">
         <form @submit.prevent="onSubmit">
             <AppControlInput type="email" v-model="email">Email Address</AppControlInput>
             <AppControlInput type="password" v-model="password">Password</AppControlInput>

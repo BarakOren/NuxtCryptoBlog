@@ -4,6 +4,7 @@
     <input
       class="block w-full box-border border-2 border-amber-400 rounded-xl p-2 bg-transparent text-zinc-500
       focus:text-white focus:shadow-[0px_0_20px_#f8c85f] outline-none
+      md:w-[9]
       "
       v-if="controlType === 'input'"
       v-bind="$attrs"
